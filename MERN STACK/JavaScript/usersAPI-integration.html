@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users API integration</title>
+    <style>
+        div{
+            margin: 30px;
+            background-color: rgb(198, 198, 197) ;
+        }
+        p{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="user-list">
+
+    </div>
+    
+
+    <script>
+
+        const httpRequest = new XMLHttpRequest();
+        httpRequest.open('GET', 'https://dummyjson.com/users');
+        httpRequest.send();
+
+        httpRequest.onreadystatechange = function(){
+            if (httpRequest.readyState === 4){
+                const response = JSON.parse(httpRequest.responseText);
+                response.users.forEach(user => {
+                const div = document.createElement('div');
+                const userText = document.createElement('p');
+                const userTextNode = document.createTextNode(user.id + "." + user.firstName + " " +  user.lastName + "" + user.maidenName + "" + user.age + "" + user.gender + " " + user.email + " " + user.phone );
+                userText.appendChild(userTextNode);
+                const p = document.createElement('span');
+                userText.style.color = ' green'; 
+                // for( var user of users){
+                //     for( var key in users ){
+                //         if (users.indexOf(key) === -1) {
+				// 			userTextNode.push(key);
+				// 		}
+
+                //     }
+                // }
+
+
+
+                
+                userText.appendChild(p);
+                div.appendChild(userText);
+
+                document.getElementById('user-list').appendChild(div);
+                
+
+
+
+                
+                
+               });
+            }
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

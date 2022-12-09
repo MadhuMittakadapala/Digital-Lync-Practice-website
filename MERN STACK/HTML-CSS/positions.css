@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+.container-one{
+    position: relative;
+}
+.inner-div{
+    background: #fff;
+    width: 40%;
+    height: 400px;
+    box-shadow: 20px  rgb(41, 35, 35);
+    border: .5px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 400px;
+    left: 40px;
+    color: blueviolet   ;
+}
+img{
+    margin: 0;
+}

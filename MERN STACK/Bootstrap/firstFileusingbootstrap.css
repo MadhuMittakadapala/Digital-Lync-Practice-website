@@ -1,0 +1,118 @@
+*{
+    font-family: Poppins,sans-serif;
+    
+}
+.navbar-container{
+    background: #fff;
+
+}
+
+.nav-bar{
+    display: flex;
+    margin: 30px 30px;  
+    
+   
+}
+.nav-links{
+    padding-left: 24rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+.nav-links a{
+    margin: 10px;
+    justify-content:last baseline ;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
+}
+#get-skilled{
+    padding: 10px 20px;
+    background: rgb(232, 202, 7);
+    color: black;
+    border-radius: 30px;
+}
+#get-skilled:hover{
+    background: green;
+    color: white;
+}
+
+.container-fuied{
+    padding: 15px;
+}
+
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.heading-1{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(30, 44, 34);
+    font-size: 45px;
+}
+.trained-col{
+    color: #555;
+    font-weight: 200;
+
+}
+.train-mid {
+    float: left;
+    font-size: 22px;
+    /* font-weight: 600; */
+    display: block;
+    line-height: 30px;
+    border-left: 1px solid #dddddd;
+    padding: 0 20px 0 20px;
+}
+.student-enroll{
+    position: relative;
+    margin: 0px 0px 0px 40px;
+}
+.para{
+    font-size: 11.5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn {
+    /* color: white; */
+    float: none;
+    text-transform: uppercase;
+    margin: 30px 10px 0px 0px;
+    padding: 10px 20px;
+    /* background: green !important; */
+    border: 1px solid green;
+    border-radius: 30px;
+}
+.btn-1{
+    background: green !important;
+    color: white;
+}
+.btn-1:hover{
+    color: black;
+}
+.btn-2:hover{
+    background: green;
+    color: white;
+
+}
+
+/* container-2 */
+#container-two{
+    margin: 100px 30px;
+    
+    width: 80%;
+    height: 5.6em;
+    background: #fff;
+    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.475);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.heading-2{
+    font-size: 24px;
+    font-weight: 800;
+}
+

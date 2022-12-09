@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conditional statements</title>
+</head>
+<body>
+    <div>
+        <label for="users"> Users:</label>
+        <select name="username" id="username" onchange="getSelectedUserInfo()">
+            <option>Select</option>
+            <option>Henry Merritt</option>
+            <option>Indigo Greer</option>
+            <option>Tamara Crane</option>
+            <option>Alice Bentley</option>
+            <option>Lilah Riley</option>
+        </select>
+    </div>
+    <div>
+        <h2> Selected User:</h2>
+        <h4> Name: <span id="name"></span></h4>
+        <h4>Phone No: <span id="phone"></span></h4>
+        <h4>Email id: <span id="email"></span></h4>
+        <h4>Address: <span id="address"></span></h4>
+        <h4>Country:  <span id="country"></span></h4>
+    </div>
+
+    <script>
+
+        //  this is called array of object
+        var users = [
+	{
+		"name": "Henry Merritt",
+		"phone": "1-636-464-2236",
+		"email": "non.massa@yahoo.ca",
+		"address": "Ap #438-5756 Lectus Ave",
+		"country": "China"
+	},
+	{
+		"name": "Indigo Greer",
+		"phone": "(761) 414-0784",
+		"email": "lacinia@yahoo.org",
+		"address": "3646 Dolor St.",
+		"country": "Nigeria"
+	},
+	{
+		"name": "Tamara Crane",
+		"phone": "1-375-252-0558",
+		"email": "vulputate@icloud.org",
+		"address": "480-8939 Dis Street",
+		"country": "South Korea"
+	},
+	{
+		"name": "Alice Bentley",
+		"phone": "(387) 368-4436",
+		"email": "blandit.nam@icloud.ca",
+		"address": "376-400 Mauris Ave",
+		"country": "Chile"
+	},
+	{
+		"name": "Lilah Riley",
+		"phone": "1-817-216-1260",
+		"email": "scelerisque@aol.ca",
+		"address": "8167 Nam Rd.",
+		"country": "Nigeria"
+	}
+];
+
+      function getSelectedUserInfo(){
+        // using if else condition statements
+        var username = document.getElementById('username').value;
+        var selectedUser = {};
+        // if (users[0].name === username){
+        //     selectedUser = users[0];
+        // } else if (users[1].name === username){
+        //     selectedUser = users[1];
+
+        // } else if (users[2].name === username){
+        //     selectedUser = users[2];
+
+        // } else if (users[3].name === username){
+        //     selectedUser = users[3];
+
+        // } else {
+        //     selectedUser = users[4];
+
+        // }
+
+        // console.log(selectedUser);
+
+
+        //  using switch statement here to minimize the if else conditon statements code
+        // more han two cases we go for switch statements
+
+        switch (username) {
+            case users[0].name: {
+                selectedUser = users[0];
+                break;
+            }
+            case users[1].name: {
+                selectedUser = users[1];
+                break;
+            }
+            case users[2].name: {
+                selectedUser = users[2];
+                break;
+            }
+            case users[3].name: {
+                selectedUser = users[3];
+                break;
+            }
+            default: {
+                selectedUser = users[4];
+                
+            }
+        }
+        console.log(selectedUser);
+
+        // for binding the data to html
+        document.getElementById('name').innerHTML = selectedUser.name;
+        document.getElementById('phone').innerHTML = selectedUser.phone;
+        document.getElementById('email').innerHTML = selectedUser.email;
+        document.getElementById('address').innerHTML = selectedUser.address;
+        document.getElementById('country').innerHTML = selectedUser.country;
+
+
+      }
+
+
+      
+
+
+
+
+    </script>
+    
+</body>
+</html>

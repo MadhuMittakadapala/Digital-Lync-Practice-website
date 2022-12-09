@@ -1,0 +1,590 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* upper navbar starts */
+.upper-nav-bar{
+    display: flex;
+    background: rgba(29, 29, 29, 0.192);
+    
+}
+#logo{
+    margin-top: 2rem;
+    
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#logo-name{
+    font-size: 36px;
+    font-weight: 600;
+    text-decoration: none;
+    /* padding-left: 32px; */
+    color: #fff;
+
+}
+.logo-slog{
+    /* margin-top: -10px; */
+    margin-left: 50px;
+    color: #fff;
+
+
+}
+#info{
+    display: flex;
+    margin-left: 20rem;
+    
+
+}
+.timings p{
+    color: white;
+    margin: 2.5em 2em;
+    cursor: pointer;
+    
+}
+/* navbar starts */
+.navbar-banner{
+    /* height: 600px; */
+    background: linear-gradient(rgba(0, 0, 0, 0.331),rgba(0, 0, 0, 0.459)), url(../images/john-2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+#position-sticky{
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+#inner-nav-bar, #get-certificate {
+    background: #ff6803;
+    padding-right: 11.2rem;
+    padding-left: 1.8em;
+    float: left; 
+    align-items: center;
+    text-align: center;
+   
+
+    
+    
+
+}
+#inner-nav-bar li {
+    /* font-size: 16px; */
+    float: left;
+    list-style-type: none;
+    align-items: center;
+    font-weight: bold;
+    padding: 30px 25px;
+    color: white;
+    /* cursor: pointer; */
+
+
+
+}
+.lists li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+     
+      
+}
+#inner-nav-bar li a:hover {
+ 
+  /* background: #1eb2a6; */
+  color: #000;
+  /* border-radius: 10px; */
+  outline: none;
+  height: 1em;
+  
+}
+#get-certificate{
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    background: #1eb2a6;
+    padding: 29px 38.2px;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    
+}
+#get-certificate::before{
+    background: #1eb2a6;
+    top: -1px;
+    bottom: -1px;
+    left: -20px;
+    width: 80px;
+    transform: skewX(-20deg);
+    z-index: -1;
+    content: "";
+    position: absolute;
+    
+}
+#get-certificate:hover{
+    color: #080808;
+    cursor: pointer;
+
+}
+
+/* navbar section ends */
+
+.banner {
+    background:linear-gradient( rgba(0,0,0,0.1),rgba(0, 0, 0, 0.717));
+    min-height: 100vh;
+    padding: 200px 0px;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    font-size: 38px;
+    
+
+}
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-top: 35px;
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: #fff;
+
+
+}
+.btn.btn-primary {
+    background: #1eb2a6;
+    padding: 20px 40px;
+    font-size: 32px;
+
+    /* border: 1px solid #ffffff; */
+}
+.btn.btn-primary:hover{
+    background: #ff6803;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.368);
+    color: #000;
+    
+}
+.btn-secondary {
+    background: #1eb2a6;
+    font-size: 32px;
+    padding: 20px 40px;
+
+
+}
+.btn-secondary:hover {
+    background: #ff6803;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.368);
+    color: #000;
+}
+
+
+/*  content  */
+.cards-container{
+    align-items: center;
+    padding: 30px;
+
+}
+.display-flex{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+
+
+.cards{
+    width: 300px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 3px 66px -24px  rgba(2, 2, 2, 0.477);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px ;
+}
+.cards:hover{
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.404);
+    transform: rotate(6deg);
+    transition: 300ms all;
+    
+}
+.cards-para{
+    color: rgb(92, 90, 90);
+    padding: 20px;
+}
+.cards h3{
+    color: #ff6803;
+}
+
+#hero-banner-heading, #buttons{
+    text-align: center;
+    /* padding: 1.5em; */
+    color: #fff;
+}
+.more-info {
+    
+    color: #ff6803;
+    list-style-type: none;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.more-info:hover{
+    /* color: #ff6803; */
+    color: #fff;
+    background: #1eb2a6;
+    border-radius: 5px;
+    padding: 10px;
+}
+.card-img{
+    width: 260px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 2.5rem;
+
+    
+}
+.card-heading{
+    margin: 30px;
+}
+
+
+/*  headings banner */
+.headings{
+    background: url(../images/bg_3.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding:0px 90px;
+    font-size: 45px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* color: white; */
+}
+
+.heading-two{
+    margin-bottom: 200px;
+    width: 100%;
+    height: 400px;
+    padding: 6em 2em;
+    background: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0,0,0,0.712)), url("../images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+/* table */
+table{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.24);
+}
+
+table, th, td{
+
+    border: 2px solid #1eb2a6;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: url(../images/img2.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: grey;
+}
+th{
+    color: #fff;
+    font-weight: bold;
+    background: #1eb2a6;
+}
+th,td{
+    padding: 20px 60px;  
+
+}
+#table-heading{
+    color: #1eb2a6  ;
+    text-align: center;
+}
+
+/* blocks section starts here */
+.blocks-container{
+    display: flex;
+    color: black;
+    margin-top: 8em;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.blocks{
+    /* background: #1eb2a6; */
+    /* padding: 20px; */
+    width: 33.33%;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.blocks:hover{
+    box-shadow: 10px 10px 25px #40404077;
+    
+
+}
+.block-one{
+    background: orchid;
+    /* margin-left: 30px; */
+    padding: 10px;
+    
+}
+
+.block-two{
+    background: #1eb2a6;
+    padding: 10px;
+
+    
+}
+.block-three{
+    background: yellowgreen;
+    padding: 10px;
+
+    
+}
+.block-icon-one{
+    margin-top: -80px;
+    padding: 40px;
+    background: orchid;
+    /* width: 80px; */
+    
+    border-radius: 50%;
+}
+.block-icon-two{
+    background: #1eb2a6;
+    margin-top: -80px;
+    padding: 40px;
+    border-radius: 50%;
+}
+.block-icon-three{
+    background: yellowgreen;
+    margin-top: -80px;
+    padding: 40px;
+    border-radius: 50%;
+}
+
+.blocks-heading{
+    color: #fff;
+    padding: 10px;
+    
+}
+
+/* container-2 rows starts here */
+
+.rows{
+    margin-top: 6rem;
+    display: flex;
+    color: #fff;
+    padding: 40px;
+}
+.row-about-us{
+    margin-top: 2rem;
+    margin-left: 40px;
+    
+}
+#row-heading{
+    color: #1eb2a6;
+    margin-bottom: 3rem;
+
+}
+#para2{
+    color: grey;
+    
+}
+#para2::selection{
+    color: red;
+    background: rgba(255, 255, 0, 0.546);
+}
+#para2::first-letter{
+    font-size: 28px;
+    color: yellow;
+    font-weight: bold;
+}
+#about-us-btn {
+    width: 14rem;
+    padding: 20px 20px;
+    border-radius: 2em 0em 2em 0em;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #ff6803;
+    cursor: pointer;
+}
+#about-us-btn:hover{
+    background: #1eb2a6;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.475);
+}
+
+/* we offer section starts here */
+.we-offered-container{
+    display: flex;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    
+    font-family: "Poppins", Arial, sans-serif;
+    
+}
+.certified-teachers-card-1{
+    
+    padding: 8rem 2rem;
+    background: #fd5f00;
+    
+}
+.paragraph{
+    margin-top: 25px;
+    
+}
+.certified-teachers-card-2{
+    
+    padding: 8rem 2rem;
+    background: #212529;
+}
+
+.certified-teachers-card-3{
+    
+    padding: 8rem 2rem;
+    background: #fd5f00;
+    
+}
+
+.certified-teachers-card-4{
+    
+    padding: 8rem 2rem;
+    background: #212529;
+}
+
+/* fox university section here */
+.fox-university-container{
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+}
+.university-details{
+    margin-left: 30px;
+}
+.university-details h2{
+    padding: 30px;
+    font-size: 60px;
+    
+
+}
+
+
+/* courses heading */
+
+#courses-heading{
+    margin-top: 80px;
+    color: #1eb2a6  ;
+    text-align: center;
+
+}
+
+/* courses container starts here */
+.courses-container{
+    /* padding: 30px; */
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+
+}
+.courses{
+    /* padding: 20px; */
+    margin: 10px;
+    text-align: center;
+    border: 1px solid rgb(100, 97, 97);
+    border-radius: 20px;
+    width: 400px;
+    height: 600px;
+}
+.courses:hover{
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.475);
+    
+}
+
+.course-img{
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+
+    
+
+    /* border: 1px solid black; */
+    
+    /* margin-bottom: 30px; */
+}
+.course-heading{
+    margin: 30px;
+}
+.course-info{
+    padding: 2px;
+}
+.Enrollbuttons{
+    width: 100%;
+    height: 100px;
+    padding: 40px;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    /* row-gap: 20px; */
+    column-gap: 30px;
+    cursor: pointer;
+    
+    
+    
+}
+.Enrollbuttons i{
+    font-size: 30px;
+    
+}
+
+.curriculum-div p,i, .enroll-now-div p{
+    padding: 10px;
+    color: grey;
+}
+
+
+
+

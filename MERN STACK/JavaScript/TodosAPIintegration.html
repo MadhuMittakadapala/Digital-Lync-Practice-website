@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration in javascript</title>
+<style>
+    span{
+        padding-left: 20px;
+        
+    }
+    p{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    div{
+        margin: 30px;
+    }
+</style>
+
+
+</head>
+<body>
+
+    <div id="todo-list">
+
+    </div>
+
+    <script>
+
+
+        // const httpRequest = new XMLHttpRequest();
+
+        // //  creating HTTP Request
+
+        // httpRequest.open('GET', 'https://dummyjson.com/todos');
+
+        // // sending request from client to server
+        // httpRequest.send();
+
+        // // intercepting ready state value changes
+        
+        // httpRequest.onreadystatechange = function(){
+        //     if (httpRequest.readyState === 4){ 
+        //         const response = JSON.parse(httpRequest.responseText);
+        //         response.todos.forEach(td => {
+        //             const div = document.createElement('div');
+        //             const todoText = document.createElement('p');
+        //             const todoTextNode = document.createTextNode(td.todo);
+        //             todoText.appendChild(todoTextNode);
+        //             const p = document.createElement('p');
+        //             const completedTextNode = document.createTextNode( td.completed ? 'completed' : 'incompleted');                    
+        //             p.appendChild(completedTextNode);
+
+        //             div.appendChild(todoText);
+        //             div.appendChild(p);
+
+        //             // we need to binding data here
+        //             document.getElementById('todo-list').appendChild(div);
+
+
+        //         });
+
+        //     }
+        // }
+
+       
+
+       const httpRequest = new XMLHttpRequest();
+       httpRequest.open( 'GET', 'https://dummyjson.com/todos');
+       httpRequest.send();
+
+
+       httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState === 4){
+            const response = JSON.parse(httpRequest.responseText);
+
+            response.todos.forEach(td => {
+                const div = document.createElement('div');
+                const todoText = document.createElement('p');
+                const todoTextNode = document.createTextNode(td.id + '.' + td.todo);
+                todoText.appendChild(todoTextNode);            
+                
+                // for displaying status completed or uncompleted create paragraph tag
+                const p = document.createElement('span');
+                const completedTextNode = document.createTextNode(td.completed ? 'completed' : ' uncompleted');
+                p.appendChild(completedTextNode);
+                if(td.completed){
+                    p.style.color = 'green';
+                    todoText.style.textDecoration = 'line-through'
+
+                } else{
+                    p.style.color = 'red';
+
+                }
+                todoText.appendChild(p);
+
+                div.appendChild(todoText);
+
+                // we need to bind the data in user interface
+                document.getElementById('todo-list').appendChild(div);
+            });
+        }
+
+
+
+
+       }
+       
+
+
+    </script>
+    
+</body>
+</html>

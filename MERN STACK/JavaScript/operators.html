@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>login</h2>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="enter your email id" id="email">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="enter your password" id="password">
+    </div>
+    <input type="button" value="login" onclick="loginUser()">
+    
+    <p id="msg"></p>
+      <script>
+
+        var a = 10;  /* variable assigning  = operator right side value 10 is stored in left side value 'a' variable */
+
+        a++;
+
+        console.log(a);      /* for using consol.log see the output in consol.*/
+
+        a++;   /*increment */
+
+        console.log(a);
+
+        a--;    /* decrement */
+        console.log(a);
+
+        var a = 20;
+
+        a--;
+        console.log(a);
+           
+
+        // assignment operators
+        var b = 20;
+
+        a = a + b;
+        console.log(a);
+
+        a += b;
+        a -= b;
+        a *= b;
+        a /= b;
+        console.log(a);
+
+
+
+    //     comparison operators
+
+       console.log(10 == 10);  /* compare the vlues as right side value compare the left side value  its condition is true its return boolean value true or false*/
+
+       console.log(10 === '10');  /* it is compare the vlaue and as well data type so datatype not equal its return false*/
+
+       console.log(typeof 10);
+       console.log(typeof '10');
+       console.log( 10 != '10');
+       console.log(10 !== '10');  /* here checks values are equal and also data types are equal*/
+       console.log(10 !== '11');
+
+
+
+    //    ternary operator
+    // syntax :  condition ? statement1 : statement2;
+    console.log(10 === '10' ? 'values and datatypes are equal' : 'values or datatypes are equal ');
+
+
+    // logical opererators && (AND), ||(OR), !(NOT)
+    // using conditional statements if and switch statements
+    /* if else if syntax: if(conditon){
+
+                                      }else if(){
+
+                                      }else{
+
+                                      }    */
+
+
+     /*
+     switch syntax :
+      switch(condition){
+        case1 : {
+          break;
+        } case2 : {
+            break;
+
+        } case3 : {
+            break;
+        }default : {
+
+        }
+      }
+     
+     
+     
+     */
+
+     var user = {
+        email: 'admin@gmail.com',
+        password: 'password'
+     };
+         function loginUser() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            // AND operator
+            if(email === user.email && password === user.password){
+                document.getElementById('msg').innerHTML = 'credentials are matched you can login here';
+            }else{
+                document.getElementById('msg').innerHTML = 'credentials ate not matched , you are not able to login'
+
+            }
+
+            // OR 
+            // if (email === user.email || password === user.password){
+            //   document.getElementById('msg').innerHTML = 'creadentials are  matched'
+            // }else{
+            //   document.getElementById('msg').innerHTML ='credentials are not matched'
+            // }
+
+         }
+
+
+
+
+      </script>
+</body>
+</html>

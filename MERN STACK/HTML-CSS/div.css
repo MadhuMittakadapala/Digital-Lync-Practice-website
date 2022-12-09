@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background: rgb(220, 220, 220);
+ 
+}
+.headings{
+    background: url(../images/bg_3.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding:0px 90px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.display-flex{
+    display: flex;
+    justify-content: left;
+}
+
+.img{
+    align-items: center;
+    padding-bottom: 20px;
+    width: 300px;
+    
+}
+.cards:hover{
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.404);
+}
+
+.banner {
+    min-height: 100vh;
+    padding: 140px 80px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    font-size: 38px;
+    
+
+}
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: #fff;
+
+
+}
+.btn.btn-primary {
+    background: #167ce9;
+    /* border: 1px solid #ffffff; */
+}
+.btn.btn-primary:hover{
+    background: #ff6803;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.368);
+    color: #fff;
+}
+.btn-secondary {
+    background: #167ce9;
+
+}
+.btn-secondary:hover {
+    background: #ff6803;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.368);
+    color: #fff;
+}
+
+.banner{
+    background: linear-gradient( rgba(0,0,0,0.1),rgba(0, 0, 0, 0.717)), url("../images/img2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+
+}
+    .cards{
+        width: 300px;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0 3px 66px -24px  rgba(2, 2, 2, 0.477);
+        border-radius: 15px;
+        margin: 200px 20px ;
+    }
+    .cards h3{
+        color: #ff6803;
+    }
+    .cards:hover {
+        
+        box-shadow: black;
+    }
+    h5, p{
+        text-align: center;
+        padding: 1.5em;
+    }
+    .img{
+        
+        padding-top: 60px;
+        
+    }
+    .text-2{
+        margin: 30px;
+    }

@@ -1,0 +1,32 @@
+table{
+    margin-top: 40px;
+    margin-left: 16rem;
+    
+}
+
+table, th, td{
+    border: 2px solid #1eb2a6;
+    border-collapse: collapse;
+    /* border-radius: 10px; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: url(../images/img2.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+th,td{
+    padding: 20px;  
+
+}
+#table-2{
+    margin: 36px 10px;
+    background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,0.61)), url(../images/photo-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: whitesmoke
+}
+.block{
+    float: left;
+    width: 50%;
+}

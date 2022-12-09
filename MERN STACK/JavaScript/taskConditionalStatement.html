@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <div>
+        <label for="country">Country:</label>
+        <select name="" id="country" onchange="getSelectedCountry()">
+            <option>Select Country</option>
+            <option>Germany</option>
+            <option>Austria</option>
+            <option>United States</option>
+            <option>Chile</option>
+            <option>Belgium</option>
+        </select>
+    </div>
+    <div>
+        <h2> Selected Country:</h2>
+        <h1> Currency: <span id="currency"></span></h1>
+    </div>
+
+    <script>
+
+        var countries = [
+	{
+		"country": "Germany",
+		"currency": "$26.22"
+	},
+	{
+		"country": "Austria",
+		"currency": "$78.45"
+	},
+	{
+		"country": "United States",
+		"currency": "$95.24"
+	},
+	{
+		"country": "Chile",
+		"currency": "$90.14"
+	},
+	{
+		"country": "Belgium",
+		"currency": "$90.91"
+	}
+
+    ];
+
+
+    function getSelectedCountry() {
+        var country = document.getElementById('country').value;
+        var selectedCountry ={};
+
+     switch (country) {
+        case countries[0].country: {
+            selectedCountry = countries[0];
+            break;
+        }  case countries[1].country: {
+            selectedCountry = countries[1];
+            break;
+        }  case countries[2].country: {
+            selectedCountry = countries[2];
+            break;
+        } case countries[3].country: {
+            selectedCountry = countries[3];
+            break;
+        } default: {
+            selectedCountry = countries[4];
+            
+        }
+     }
+
+      console.log(selectedCountry);
+    
+
+      document.getElementById('currency').innerHTML = selectedCountry.currency;
+    }
+    </script>
+    
+</body>
+</html>

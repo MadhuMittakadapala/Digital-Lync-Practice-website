@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForOf and ForIn methods</title>
+
+	<style>
+		table,th,td{
+			border: 2px solid black;
+			border-collapse: collapse;
+			padding: 10px 30px;
+		}
+		th{
+			color: red;
+			background: lightblue;
+		}
+	</style>
+
+</head>
+<body>
+
+	<!--  we create table shows in the ui so we can bind the the data of users and create tr and th and td for the table using functions -->
+
+	<table id="user-data">
+
+	</table>
+
+    <script>
+
+
+         var tableHeaders = [];
+
+       
+         var users = [
+
+				{
+					"name": "Alexis Mcgee",
+					"phone": "(425) 441-2939",
+					"email": "et.commodo.at@hotmail.net",
+					"address": "P.O. Box 522, 2892 Quam Avenue",
+					"postalZip": "50401",
+					"region": "Massachusetts",
+					"country": "Nigeria",
+					"currency": "$25.31"
+				},
+				{
+					"name": "Mercedes Ellis",
+					"phone": "(224) 796-8358",
+					"email": "aliquam.erat@hotmail.ca",
+					"address": "Ap #412-2980 Feugiat Ave",
+					"postalZip": "4132",
+					"region": "Munster",
+					"country": "Canada",
+					"currency": "$13.90"
+				},
+				{
+					"name": "Fallon Simon",
+					"phone": "1-600-325-3173",
+					"email": "magna.lorem@hotmail.net",
+					"address": "3440 Egestas St.",
+					"postalZip": "53782",
+					"region": "North Island",
+					"country": "Austria",
+					"currency": "$84.14"
+				},
+				{
+					"name": "Shannon Stark",
+					"phone": "1-484-228-2841",
+					"email": "sed.orci@aol.edu",
+					"address": "664-5201 Nisi St.",
+					"postalZip": "547722",
+					"region": "Mpumalanga",
+					"country": "India",
+					"currency": "$76.59"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Alexis Mcgee",
+					"phone": "(425) 441-2939",
+					"email": "et.commodo.at@hotmail.net",
+					"address": "P.O. Box 522, 2892 Quam Avenue",
+					"postalZip": "50401",
+					"region": "Massachusetts",
+					"country": "Nigeria",
+					"currency": "$25.31"
+				},
+				{
+					"name": "Mercedes Ellis",
+					"phone": "(224) 796-8358",
+					"email": "aliquam.erat@hotmail.ca",
+					"address": "Ap #412-2980 Feugiat Ave",
+					"postalZip": "4132",
+					"region": "Munster",
+					"country": "Canada",
+					"currency": "$13.90"
+				},
+				{
+					"name": "Fallon Simon",
+					"phone": "1-600-325-3173",
+					"email": "magna.lorem@hotmail.net",
+					"address": "3440 Egestas St.",
+					"postalZip": "53782",
+					"region": "North Island",
+					"country": "Austria",
+					"currency": "$84.14"
+				},
+				{
+					"name": "Shannon Stark",
+					"phone": "1-484-228-2841",
+					"email": "sed.orci@aol.edu",
+					"address": "664-5201 Nisi St.",
+					"postalZip": "547722",
+					"region": "Mpumalanga",
+					"country": "India",
+					"currency": "$76.59"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				},
+				{
+					"name": "Oleg Ford",
+					"phone": "1-348-536-2875",
+					"email": "arcu.et.pede@yahoo.couk",
+					"address": "Ap #892-7441 Nec Road",
+					"postalZip": "651714",
+					"region": "North-East Region",
+					"country": "Ireland",
+					"currency": "$72.09"
+				}
+		 
+			
+			
+			];
+       
+		    for (var user of users) {
+				for(var key in user){
+					console.log(key + '-' + user[key]);
+				}
+
+			}
+
+			generateTableHeader();
+
+			function generateTableHeader(){
+				var userTable = document.getElementById('user-data');	
+ 
+
+				for ( var user of users) {
+	
+					for( var key in user){
+						if (tableHeaders.indexOf(key) === -1) {
+							tableHeaders.push(key);
+							
+
+
+						};
+					}
+					
+				}
+				console.log(tableHeaders);
+
+				// var tr = userTable.insertRow();  //you can use either create method
+				var tr = document.createElement('tr');
+				tableHeaders.forEach(function(header) {
+					var th = document.createElement('th');
+					var textnode = document.createTextNode(header.toUpperCase());
+					th.appendChild(textnode);
+					tr.appendChild(th);
+				});
+				userTable.appendChild(tr);
+
+				console.log();
+
+			}
+
+			generateTableDynamically();
+
+			function generateTableDynamically(){
+				var userTable = document.getElementById('user-data');
+				for(var user of users) {
+					var tr = document.createElement('tr');                                               
+					for(var key in user){
+						var td = document.createElement('td');
+						var textnode = document.createTextNode(user[key]);
+						td.appendChild(textnode);
+						tr.appendChild(td);
+
+
+					}
+					userTable.appendChild(tr);
+
+
+				}
+
+			}
+			
+		
+    </script>
+    
+</body>
+</html>

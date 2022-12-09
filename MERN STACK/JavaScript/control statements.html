@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="name1"></p>
+     <p id="name2"></p>
+     <p id="name3"></p>
+     <p id="name4"></p>
+
+
+     <div id="div">
+
+     </div>
+
+    <script>
+        var names = ['Madhu', 'Nithiin','Praveen', 'Prashanth', 'Venkatesh', 'Prasad', 'Babloo'];
+        document.getElementById('name1').innerHTML = names[0];
+        document.getElementById('name2').innerHTML = names[1];
+        document.getElementById('name3').innerHTML = names[2];
+        document.getElementById('name4').innerHTML = names[3];
+   
+      console.log(names);
+
+    //   we dont know how many number of elements to have, so we cant create static way .
+    //  should make it dynamic create elements ,using javascript 
+    
+    var para = document.createElement('p');
+
+    // console.log(para);
+
+    para.classList.add('para');
+    para.style.color = 'red';
+
+    var span = document.createElement('span');
+    // console.log(span);
+
+    //  this span tag in between para tag
+
+    para.appendChild(span);
+    span.innerHTML = 'Digital Lync'
+    console.log(para);
+     
+//    document.getElementById('div').appendChild(para);
+
+
+
+// using while loop
+   var i = 0;
+   while(i < names.length){
+    var para = document.createElement('p');
+    para.innerHTML = names[i];
+    document.getElementById('div').appendChild(para);
+    i++;
+   }
+
+//    for remove the element of arrey list
+
+    var div = document.getElementById('div');
+    while(div.firstChild){
+        div.removeChild(div.lastChild);
+
+    }
+
+
+//    same way using do--while
+// var i = 0;
+// do{
+// var para = document.createElement('p');
+// para.innerHTML = names[i];
+// document.getElementById('div').appendChild(para);
+
+// i++;
+
+
+// }while(i < names.length);
+
+    </script>
+    
+</body>
+</html>
